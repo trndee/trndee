@@ -31,14 +31,16 @@ const Header = () => (
             </Art>
             <Text>
               <h1>
-                We make predictions of the future
+                We make predictions of
                 <br />
-                based on past and present data
+                the future based on
+                <br />
+                past and present data
               </h1>
               <br />
               <p>
                 <StyledExternalLink href="#">
-                  Check out source &nbsp;&#x2794;
+                  Read more &nbsp;&#x2794;
                 </StyledExternalLink>
               </p>
             </Text>
