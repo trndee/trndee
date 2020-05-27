@@ -158,4 +158,4 @@ const Subtitle = styled.p`
   color: ${props => props.theme.color.black.light};
 `;
 
-export default Team;
+export default Contact;
