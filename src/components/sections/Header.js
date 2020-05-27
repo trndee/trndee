@@ -38,7 +38,7 @@ const Header = () => (
                 past and present data
               </h1>
               <br />
-              <p>
+              <p style="text-align:right;">
                 <StyledExternalLink href="#">
                   Read more &nbsp;&#x2794;
                 </StyledExternalLink>
