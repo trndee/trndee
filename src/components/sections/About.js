@@ -20,9 +20,9 @@ const About = () => (
           }
         }
 
-        art_savant: file(
+        art_techniques: file(
           sourceInstanceName: { eq: "art" }
-          name: { eq: "savant" }
+          name: { eq: "techniques" }
         ) {
           childImageSharp {
             fluid(maxWidth: 760) {
@@ -61,7 +61,7 @@ const About = () => (
           </Grid>
           <Grid inverse>
             <Art>
-              <Img fluid={data.art_savant.childImageSharp.fluid} />
+              <Img fluid={data.art_techniques.childImageSharp.fluid} />
             </Art>
             <div>
               <h2>How</h2>
