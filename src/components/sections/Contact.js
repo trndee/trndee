@@ -4,6 +4,7 @@ import { StaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
 import { Section, Container } from '@components/global';
+import ExternalLink from '@common/ExternalLink';
 
 const Contact = () => (
   <StaticQuery
@@ -48,40 +49,17 @@ const Contact = () => (
         <Container>
           <Grid>
             <div>
-              <h2>Speed past the competition</h2>
+              <h2>We are located in Estonia, between Playtech and Skype:</h2>
               <p>
-                Gatsby.js builds the fastest possible website. Instead of
-                waiting to generate pages when requested, pre-build pages and
-                lift them into a global cloud of servers — ready to be delivered
-                instantly to your users wherever they are.
+                trnd.ee OÜ<br />
+                Katleri 19-38<br />
+                13915 Tallinn<br />
+                Estonia<br />
+              <p>
+                <StyledExternalLink href="#">
+                  Click here to contact us &nbsp;&#x2794;
+                </StyledExternalLink>
               </p>
-            </div>
-            <Art>
-              <Img fluid={data.art_fast.childImageSharp.fluid} />
-            </Art>
-          </Grid>
-          <Grid inverse>
-            <Art>
-              <Img fluid={data.art_learn.childImageSharp.fluid} />
-            </Art>
-            <div>
-              <h2>Nothing new to learn here</h2>
-              <p>
-                Enjoy the power of the latest web technologies – React.js ,
-                Webpack , modern JavaScript and CSS and more — all set up and
-                waiting for you to start building.
-              </p>
-            </div>
-          </Grid>
-          <Grid>
-            <div>
-              <h2>Grow and build your ideas</h2>
-              <p>
-                Waste no more time on tooling and performance. Focus on the the
-                site you want to build and nothing more.
-                <br />
-                <br />
-                Gatsby is fast in every way that matters.
               </p>
             </div>
             <Art>
@@ -137,6 +115,14 @@ const Art = styled.figure`
   margin: 0;
   max-width: 380px;
   width: 100%;
+`;
+
+const StyledExternalLink = styled(ExternalLink)`
+  color: inherit;
+  text-decoration: none;
+  &:hover {
+    color: ${props => props.theme.color.black.regular};
+  }
 `;
 
 export default Contact;
