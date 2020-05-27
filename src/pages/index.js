@@ -5,8 +5,8 @@ import Navbar from '@common/Navbar';
 
 import Header from '@sections/Header';
 import About from '@sections/About';
-import Brands from '@sections/FAQ';
-import Team from '@sections/Contact';
+import FAQ from '@sections/Faq';
+import Contact from '@sections/Contact';
 import Footer from '@sections/Footer';
 
 const IndexPage = () => (
