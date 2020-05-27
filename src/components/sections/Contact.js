@@ -5,61 +5,38 @@ import Img from 'gatsby-image';
 
 import { Section, Container } from '@components/global';
 
-const TEAM = [
-  {
-    name: 'Josh Peck',
-    image: 'josh.jpg',
-    role: 'Founder',
-  },
-  {
-    name: 'Lisa Haydon',
-    image: 'lisa.jpg',
-    role: 'Art Director',
-  },
-  {
-    name: 'Ashlyn Harris',
-    image: 'ashlyn.jpg',
-    role: 'Frontend Engineer',
-  },
-  {
-    name: 'Todd Joseph',
-    image: 'todd.jpg',
-    role: 'Designer',
-  },
-  {
-    name: 'Martin White',
-    image: 'martin.jpg',
-    role: 'Backend Engineer',
-  },
-  {
-    name: 'Rose Leslie',
-    image: 'rose.jpg',
-    role: 'Marketing',
-  },
-];
-
-const Team = () => (
+const Contact = () => (
   <StaticQuery
     query={graphql`
       query {
-        allFile(filter: { sourceInstanceName: { eq: "team" } }) {
-          edges {
-            node {
-              relativePath
-              childImageSharp {
-                fluid(maxWidth: 400, maxHeight: 400) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
+        art_fast: file(
+          sourceInstanceName: { eq: "art" }
+          name: { eq: "fast" }
+        ) {
+          childImageSharp {
+            fluid(maxWidth: 760) {
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }
         }
-        art_team: file(
+
+        art_learn: file(
           sourceInstanceName: { eq: "art" }
-          name: { eq: "team_work" }
+          name: { eq: "learn_yourself" }
         ) {
           childImageSharp {
-            fluid(maxWidth: 1600) {
+            fluid(maxWidth: 760) {
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            }
+          }
+        }
+
+        art_ideas: file(
+          sourceInstanceName: { eq: "art" }
+          name: { eq: "ideas" }
+        ) {
+          childImageSharp {
+            fluid(maxWidth: 760) {
               ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }
@@ -67,95 +44,99 @@ const Team = () => (
       }
     `}
     render={data => (
-      <Section id="team" accent="secondary">
-        <Container style={{ position: 'relative' }}>
-          <h1>The Team</h1>
-          <TeamGrid>
-            {TEAM.map(({ name, image, role }) => {
-              const img = data.allFile.edges.find(
-                ({ node }) => node.relativePath === image
-              ).node;
-
-              return (
-                <div key={name}>
-                  <Img fluid={img.childImageSharp.fluid} alt={name} />
-                  <Title>{name}</Title>
-                  <Subtitle>{role}</Subtitle>
-                </div>
-              );
-            })}
-          </TeamGrid>
-          <Art>
-            <Img fluid={data.art_team.childImageSharp.fluid} />
-          </Art>
-          <ArtMobile>
-            <Img fluid={data.art_team.childImageSharp.fluid} />
-          </ArtMobile>
+      <Section id="contact">
+        <Container>
+          <Grid>
+            <div>
+              <h2>Speed past the competition</h2>
+              <p>
+                Gatsby.js builds the fastest possible website. Instead of
+                waiting to generate pages when requested, pre-build pages and
+                lift them into a global cloud of servers — ready to be delivered
+                instantly to your users wherever they are.
+              </p>
+            </div>
+            <Art>
+              <Img fluid={data.art_fast.childImageSharp.fluid} />
+            </Art>
+          </Grid>
+          <Grid inverse>
+            <Art>
+              <Img fluid={data.art_learn.childImageSharp.fluid} />
+            </Art>
+            <div>
+              <h2>Nothing new to learn here</h2>
+              <p>
+                Enjoy the power of the latest web technologies – React.js ,
+                Webpack , modern JavaScript and CSS and more — all set up and
+                waiting for you to start building.
+              </p>
+            </div>
+          </Grid>
+          <Grid>
+            <div>
+              <h2>Grow and build your ideas</h2>
+              <p>
+                Waste no more time on tooling and performance. Focus on the the
+                site you want to build and nothing more.
+                <br />
+                <br />
+                Gatsby is fast in every way that matters.
+              </p>
+            </div>
+            <Art>
+              <Img fluid={data.art_ideas.childImageSharp.fluid} />
+            </Art>
+          </Grid>
         </Container>
       </Section>
     )}
   />
 );
 
-const TeamGrid = styled.div`
+const Grid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, 200px);
-  grid-template-rows: min-content;
-  grid-gap: 50px;
-  justify-content: space-between;
-  width: 60%;
-  margin-top: 72px;
+  grid-template-columns: 3fr 2fr;
+  grid-gap: 40px;
+  text-align: right;
+  align-items: center;
+  justify-items: center;
+  margin: 24px 0;
 
-  @media (max-width: ${props => props.theme.screen.lg}) {
-    justify-content: start;
+  ${props =>
+    props.inverse &&
+    `
+    text-align: left;
+    grid-template-columns: 2fr 3fr;
+  `}
+
+  h2 {
+    margin-bottom: 16px;
   }
 
   @media (max-width: ${props => props.theme.screen.md}) {
-    width: 100%;
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-  }
+    grid-template-columns: 1fr;
+    text-align: left;
+    margin-bottom: 96px;
 
-  @media (max-width: ${props => props.theme.screen.xs}) {
-    grid-gap: 24px;
+    &:last-child {
+      margin-bottom: 24px;
+    }
+
+    ${props =>
+      props.inverse &&
+      `
+        ${Art} {
+          order: 2;
+        }
+    `}
   }
 `;
 
 const Art = styled.figure`
-  width: 800px;
-  margin: -80px 0;
-  position: absolute;
-  top: 0;
-  left: 70%;
-
-  @media (max-width: ${props => props.theme.screen.lg}) {
-    top: 20%;
-  }
-
-  @media (max-width: ${props => props.theme.screen.md}) {
-    display: none;
-  }
-`;
-
-const ArtMobile = styled.figure`
-  width: 100%;
   margin: 0;
-  display: none;
-  margin-top: 64px;
-  margin-bottom: -60%;
-
-  @media (max-width: ${props => props.theme.screen.md}) {
-    display: block;
-  }
-`;
-
-const Title = styled.p`
-  margin-top: 16px;
-  color: ${props => props.theme.color.black.regular};
-`;
-
-const Subtitle = styled.p`
-  ${props => props.theme.font_size.small};
-  color: ${props => props.theme.color.black.light};
+  max-width: 380px;
+  width: 100%;
 `;
 
 export default Contact;
