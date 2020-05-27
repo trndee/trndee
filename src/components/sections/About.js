@@ -48,7 +48,7 @@ const About = () => (
         <Container>
           <Grid>
             <div>
-              <h2>What</h2>
+              <h2>What we do</h2>
               <p>
                 We extract information from data to predict trends patterns and 
                 we calculate the statistical probabilities of future events to 
@@ -64,7 +64,7 @@ const About = () => (
               <Img fluid={data.art_techniques.childImageSharp.fluid} />
             </Art>
             <div>
-              <h2>How</h2>
+              <h2>How we do it</h2>
               <p>
                 Our techniques include data modeling, machine learning, 
                 AI, deep learning algorithms and data mining.
@@ -73,10 +73,10 @@ const About = () => (
           </Grid>
           <Grid>
             <div>
-              <h2>Why</h2>
+              <h2>Where we use it</h2>
               <p>
                 We use forecasting in many applications including anomaly detection, 
-                capacity planning, social networking and sports.
+                capacity planning, logisitcs and sports.
               </p>
             </div>
             <Art>
