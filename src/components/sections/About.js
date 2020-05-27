@@ -9,9 +9,9 @@ const About = () => (
   <StaticQuery
     query={graphql`
       query {
-        art_fast: file(
+        art_data: file(
           sourceInstanceName: { eq: "art" }
-          name: { eq: "fast" }
+          name: { eq: "data" }
         ) {
           childImageSharp {
             fluid(maxWidth: 760) {
@@ -20,9 +20,9 @@ const About = () => (
           }
         }
 
-        art_learn: file(
+        art_savant: file(
           sourceInstanceName: { eq: "art" }
-          name: { eq: "learn_yourself" }
+          name: { eq: "savant" }
         ) {
           childImageSharp {
             fluid(maxWidth: 760) {
@@ -31,9 +31,9 @@ const About = () => (
           }
         }
 
-        art_ideas: file(
+        art_logistics: file(
           sourceInstanceName: { eq: "art" }
-          name: { eq: "ideas" }
+          name: { eq: "logistics" }
         ) {
           childImageSharp {
             fluid(maxWidth: 760) {
@@ -56,12 +56,12 @@ const About = () => (
               </p>
             </div>
             <Art>
-              <Img fluid={data.art_fast.childImageSharp.fluid} />
+              <Img fluid={data.art_data.childImageSharp.fluid} />
             </Art>
           </Grid>
           <Grid inverse>
             <Art>
-              <Img fluid={data.art_learn.childImageSharp.fluid} />
+              <Img fluid={data.art_savant.childImageSharp.fluid} />
             </Art>
             <div>
               <h2>How</h2>
@@ -80,7 +80,7 @@ const About = () => (
               </p>
             </div>
             <Art>
-              <Img fluid={data.art_ideas.childImageSharp.fluid} />
+              <Img fluid={data.art_logistics.childImageSharp.fluid} />
             </Art>
           </Grid>
         </Container>
