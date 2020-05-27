@@ -12,13 +12,13 @@ const theme = {
   },
   color: {
     white: {
-      regular: '#FFFFFF',
-      dark: '#F6F6F6',
+      regular: '#ffffff',
+      dark: '#f2f2f2',
     },
     black: {
-      lighter: '#ABA8AF',
-      light: '#564F62',
-      regular: '#211E26',
+      lighter: '#989898',
+      light: '#727272',
+      regular: '#000000',
     },
     primary: '#8bd8ed',
   },
