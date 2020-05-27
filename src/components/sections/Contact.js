@@ -10,31 +10,9 @@ const Contact = () => (
   <StaticQuery
     query={graphql`
       query {
-        art_fast: file(
+        art_lighthouse: file(
           sourceInstanceName: { eq: "art" }
-          name: { eq: "fast" }
-        ) {
-          childImageSharp {
-            fluid(maxWidth: 760) {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
-            }
-          }
-        }
-
-        art_learn: file(
-          sourceInstanceName: { eq: "art" }
-          name: { eq: "learn_yourself" }
-        ) {
-          childImageSharp {
-            fluid(maxWidth: 760) {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
-            }
-          }
-        }
-
-        art_ideas: file(
-          sourceInstanceName: { eq: "art" }
-          name: { eq: "ideas" }
+          name: { eq: "lighthouse" }
         ) {
           childImageSharp {
             fluid(maxWidth: 760) {
@@ -54,7 +32,7 @@ const Contact = () => (
                 trnd.ee OÜ<br />
                 Katleri 19-38<br />
                 13915 Tallinn<br />
-                Estonia<br />
+                Estonia<br /><br />
               <p>
                 <StyledExternalLink href="#">
                   Click here to contact us &nbsp;&#x2794;
@@ -63,7 +41,7 @@ const Contact = () => (
               </p>
             </div>
             <Art>
-              <Img fluid={data.art_ideas.childImageSharp.fluid} />
+              <Img fluid={data.art_lighthouse.childImageSharp.fluid} />
             </Art>
           </Grid>
         </Container>
