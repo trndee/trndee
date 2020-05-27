@@ -7,58 +7,43 @@ import ExternalLink from '@common/ExternalLink';
 
 const FAQS = [
   {
-    title: 'What tech does Gatsby use?',
+    title: 'What is forecasting?',
     content: () => (
       <>
-        Enjoy the power of the latest web technologies – React.js , Webpack ,
-        modern JavaScript and CSS and more — all set up and waiting for you to
-        start building
+        Forecasting is the process of making predictions of the future based on 
+        past and present data and most commonly by analysis of trends.
       </>
     ),
   },
   {
-    title: 'Where can you source data from?',
+    title: 'Why are AI and machine learning indispensable?',
     content: () => (
       <>
-        Gatsby’s rich data plugin ecosystem lets you build sites with the data
-        you want — from one or many sources: Pull data from headless CMSs, SaaS
-        services, APIs, databases, your file system, and more directly into your
-        pages using GraphQL.
+        Machine learning is the study of computer algorithms that improve automatically 
+        through experience. It is seen as a subset of artificial intelligence. Machine 
+        learning algorithms build a mathematical model based on sample data, known as 
+        "training data", in order to make predictions or decisions without being explicitly 
+        programmed to do so
       </>
     ),
   },
   {
-    title: 'How do I scale Gatsby sites?',
+    title: 'Who are our customers?',
     content: () => (
       <>
-        Gatsby.js is Internet Scale. Forget complicated deploys with databases
-        and servers and their expensive, time-consuming setup costs,
-        maintenance, and scaling fears. Gatsby.js builds your site as “static”
-        files which can be deployed easily on dozens of services.
+        We offer a range of solutions for institutions, financial professionals 
+        and individuals across the globe. From shop assistants in your local stores 
+        to national organisations and charities, we have helped our customers 
+        anticipate.
       </>
     ),
   },
   {
-    title: 'How does do I future-proof my website?',
+    title: 'Can we really predict the future?',
     content: () => (
       <>
-        Do not build a website with last decade’s tech. The future of the web is
-        mobile, JavaScript and APIs—the{` `}
-        <ExternalLink href="https://jamstack.org/">JAMstack</ExternalLink>.
-        Every website is a web app and every web app is a website. Gatsby.js is
-        the universal JavaScript framework you’ve been waiting for.
-      </>
-    ),
-  },
-  {
-    title: 'What exactly does Gatsby build?',
-    content: () => (
-      <>
-        Gatsby.js is a static PWA (Progressive Web App) generator. You get code
-        and data splitting out-of-the-box. Gatsby loads only the critical HTML,
-        CSS, data, and JavaScript so your site loads as fast as possible. Once
-        loaded, Gatsby prefetches resources for other pages so clicking around
-        the site feels incredibly fast.
+        Not quite. But what we can do is to generate alternative scenarios of the 
+        future and predict outcomes including both likely and unlikely futures.
       </>
     ),
   },
