@@ -10,9 +10,9 @@ const Header = () => (
   <StaticQuery
     query={graphql`
       query {
-        art_build: file(
+        art_predict: file(
           sourceInstanceName: { eq: "art" }
-          name: { eq: "build" }
+          name: { eq: "predict" }
         ) {
           childImageSharp {
             fluid(maxWidth: 1400) {
@@ -27,19 +27,17 @@ const Header = () => (
         <Container>
           <Grid>
             <Art>
-              <Img fluid={data.art_build.childImageSharp.fluid} />
+              <Img fluid={data.art_predict.childImageSharp.fluid} />
             </Art>
             <Text>
               <h1>
-                Fast in
+                We make predictions of the future
                 <br />
-                every way
-                <br />
-                that matters
+                based on past and present data
               </h1>
               <br />
               <p>
-                <StyledExternalLink href="https://github.com/ajayns/gatsby-absurd">
+                <StyledExternalLink href="#">
                   Check out source &nbsp;&#x2794;
                 </StyledExternalLink>
               </p>
