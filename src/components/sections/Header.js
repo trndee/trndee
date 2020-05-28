@@ -4,7 +4,6 @@ import { StaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
 import { Container } from '@components/global';
-import InternalLink from '@common/InternalLink';
 import ExternalLink from '@common/ExternalLink';
 
 const Header = () => (
@@ -40,9 +39,9 @@ const Header = () => (
               </h1>
               <br />
               <p style="text-align:right;">
-                <StyledInternalLink href="#about">
+                <StyledExternalLink href="#about">
                   Read more &nbsp;&#x2794;
-                </StyledInternalLink>
+                </StyledExternalLink>
               </p>
             </Text>
           </Grid>
