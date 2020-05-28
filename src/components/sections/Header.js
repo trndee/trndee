@@ -39,7 +39,7 @@ const Header = () => (
               </h1>
               <br />
               <p style="text-align:right;">
-                <StyledExternalLink href="#">
+                <StyledInternalLink href="#about">
                   Read more &nbsp;&#x2794;
                 </StyledExternalLink>
               </p>
@@ -99,6 +99,15 @@ const Text = styled.div`
 `;
 
 const StyledExternalLink = styled(ExternalLink)`
+  color: inherit;
+  text-decoration: none;
+
+  &:hover {
+    color: ${props => props.theme.color.black.regular};
+  }
+`;
+
+const StyledInternalLink = styled(InternalLink)`
   color: inherit;
   text-decoration: none;
 
