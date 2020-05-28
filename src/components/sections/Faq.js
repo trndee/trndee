@@ -20,10 +20,9 @@ const FAQS = [
     content: () => (
       <>
         Machine learning is the study of computer algorithms that improve automatically 
-        through experience. It is seen as a subset of artificial intelligence. Machine 
-        learning algorithms build a mathematical model based on sample data, known as 
-        "training data", in order to make predictions or decisions without being explicitly 
-        programmed to do so
+        through experience. Machine learning algorithms build a mathematical model based 
+        on training data in order to make predictions or decisions without being explicitly 
+        programmed to do so.
       </>
     ),
   },
@@ -32,7 +31,7 @@ const FAQS = [
     content: () => (
       <>
         We don’t set limits based on what others think is possible or impossible. We drive 
-        ourselves to push boundaries and solve problems. We continuously expand our knowledge 
+        ourselves to push boundaries, solve problems and continuously expand our knowledge 
         to find new answers.
       </>
     ),
