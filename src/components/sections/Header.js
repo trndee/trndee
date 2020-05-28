@@ -4,6 +4,7 @@ import { StaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
 import { Container } from '@components/global';
+import InternalLink from '@common/InternalLink';
 
 const Header = () => (
   <StaticQuery
