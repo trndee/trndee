@@ -16,7 +16,7 @@ const FAQS = [
     ),
   },
   {
-    title: 'Why are AI and machine learning indispensable?',
+    title: 'Why is machine learning so exciting?',
     content: () => (
       <>
         Machine learning is the study of computer algorithms that improve automatically 
@@ -28,13 +28,12 @@ const FAQS = [
     ),
   },
   {
-    title: 'Who are our customers?',
+    title: 'What is our perspective?',
     content: () => (
       <>
-        We offer a range of solutions for institutions, financial professionals 
-        and individuals across the globe. From shop assistants in your local stores 
-        to national organisations and charities, we have helped our customers 
-        anticipate.
+        We don’t set limits based on what others think is possible or impossible. We drive 
+        ourselves to push boundaries and solve problems. We continuously expand our knowledge 
+        to find new answers.
       </>
     ),
   },
