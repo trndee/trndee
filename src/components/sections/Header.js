@@ -38,10 +38,10 @@ const Header = () => (
                 past and present data
               </h1>
               <br />
-              <p style="text-align:right;">
-                <StyledExternalLink href="#about">
+              <p>
+                <a href="#about">
                   Read more &nbsp;&#x2794;
-                </StyledExternalLink>
+                </a>
               </p>
             </Text>
           </Grid>
