@@ -39,9 +39,9 @@ const Header = () => (
               </h1>
               <br />
               <p>
-                <a href="#about">
+                <StyledExternalLink href="#faq">
                   Read more &nbsp;&#x2794;
-                </a>
+                </StyledExternalLink>
               </p>
             </Text>
           </Grid>
