@@ -99,15 +99,6 @@ const Art = styled.figure`
   width: 100%;
 `;
 
-const StyledInternalLink = styled(InternalLink)`
-  color: inherit;
-  text-decoration: none;
-
-  &:hover {
-    color: ${props => props.theme.color.black.regular};
-  }
-`;
-
 const StyledExternalLink = styled(ExternalLink)`
   color: inherit;
   text-decoration: none;
