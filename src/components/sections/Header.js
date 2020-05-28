@@ -4,6 +4,7 @@ import { StaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
 import { Container } from '@components/global';
+import InternalLink from '@common/InternalLink';
 import ExternalLink from '@common/ExternalLink';
 
 const Header = () => (
@@ -98,7 +99,7 @@ const Text = styled.div`
   }
 `;
 
-const StyledExternalLink = styled(ExternalLink)`
+const StyledInternalLink = styled(InternalLink)`
   color: inherit;
   text-decoration: none;
 
@@ -107,7 +108,7 @@ const StyledExternalLink = styled(ExternalLink)`
   }
 `;
 
-const StyledInternalLink = styled(InternalLink)`
+const StyledExternalLink = styled(ExternalLink)`
   color: inherit;
   text-decoration: none;
 
