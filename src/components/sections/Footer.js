@@ -47,7 +47,7 @@ const Footer = () => (
           <StyledContainer>
             <Copyright>
               <p>
-                &#169; trnd.ee OÜ. All rights reserved.
+                Copyright trnd.ee OÜ. All rights reserved.
               </p>
             </Copyright>
           </StyledContainer>
