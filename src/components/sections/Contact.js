@@ -27,10 +27,7 @@ const Contact = () => (
         <Container>
           <Grid inverse>
             <div>
-              <h2>We are located in Estonia, between 
-              <StyledExternalLink href="https://www.playtech.com/">Playtech</StyledExternalLink> 
-              and 
-              <StyledExternalLink href="https://www.skype.com/">Skype</StyledExternalLink>:</h2>
+              <h2>We are located in Estonia, between Playtech and Skype:</h2>
               <p>
                 trnd.ee OÜ<br />
                 Katleri 19-38<br />
