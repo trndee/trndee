@@ -76,7 +76,7 @@ const About = () => (
               <h2>Where we use it</h2>
               <p>
                 We use forecasting in many applications including anomaly detection, 
-                capacity planning, logisitcs and sports.
+                capacity planning, logistics and sports.
               </p>
             </div>
             <Art>
