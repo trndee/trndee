@@ -41,7 +41,7 @@ const Header = () => (
               <p style="text-align:right;">
                 <StyledInternalLink href="#about">
                   Read more &nbsp;&#x2794;
-                </StyledExternalLink>
+                </StyledInternalLink>
               </p>
             </Text>
           </Grid>
