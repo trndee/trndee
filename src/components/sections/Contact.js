@@ -4,7 +4,6 @@ import { StaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
 import { Section, Container } from '@components/global';
-import InternalLink from '@common/InternalLink';
 import ExternalLink from '@common/ExternalLink';
 
 const Contact = () => (
