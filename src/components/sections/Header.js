@@ -98,15 +98,6 @@ const Text = styled.div`
   }
 `;
 
-const StyledInternalLink = styled(InternalLink)`
-  color: inherit;
-  text-decoration: none;
-
-  &:hover {
-    color: ${props => props.theme.color.black.regular};
-  }
-`;
-
 const StyledExternalLink = styled(ExternalLink)`
   color: inherit;
   text-decoration: none;
